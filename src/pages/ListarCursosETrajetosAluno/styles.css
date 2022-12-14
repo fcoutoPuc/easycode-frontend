@@ -1,0 +1,60 @@
+.title-aluno-cursos-trajetos {
+    margin-bottom: 10px !important;
+}
+
+.items-menu {
+    float: right !important;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    position: absolute;
+    right: 0px;
+}
+
+.dif-facil {
+
+    color: green;
+}
+
+.dif-medio {
+    color: #cccc2c;
+}
+
+.dif-dificil {
+    color: tomato;
+}
+
+.drawerDetails {
+    margin-left: 15px !important;
+    margin-top: 10px;
+}
+
+.eachItemDraw {
+    margin-bottom: 30px;
+}
+
+.drawerClass {
+    max-width: 10% !important;
+}
+
+.MuiDrawer-paper {
+    width: 30%;
+}
+
+.eachItemTitle {
+    color: #3f51b5;
+}
+
+.dratitle{
+    color: #3f51b5;
+    margin-left: 10px !important;
+    margin-bottom: 20px;
+}
+
+.titulo-bv {
+    color: #3f51b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+}

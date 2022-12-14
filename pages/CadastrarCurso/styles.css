@@ -1,0 +1,48 @@
+.teste {
+    padding: 32px;
+}
+
+.titulo-cadastroCurso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-topico {
+    width: 100%;
+}
+
+.cadastrar-curso-container {
+    margin: auto;
+    width: 64%;
+    border: 3px solid #3f51b5;
+    padding: 10px;
+    text-align: center;
+    margin-top: 5%;
+    border-radius: 10px;
+    
+}
+.addBtn {
+    color: white !important;
+    background-color: green !important;
+    margin-right: 10px !important;
+    
+}
+
+.rmBtn {
+    color: white !important;
+    background-color: red !important;
+}
+
+.btn-class {
+    display: flex !important;
+    margin: auto;
+}
+
+.textArea{
+    width: 100% !important;
+    height: 100% !important;
+    border-color: #3f51b5;
+    
+    border-radius: 10px;
+}

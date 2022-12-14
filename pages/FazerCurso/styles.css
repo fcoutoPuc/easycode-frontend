@@ -1,0 +1,12 @@
+.video {
+    width: 100%;
+    height: 500px !important;
+}
+
+.btn-finaliza-curso{
+    width: 15% !important;
+    float: right;
+    color: white !important;
+    background-color: green !important;
+    
+}

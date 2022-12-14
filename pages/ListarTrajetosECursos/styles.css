@@ -1,0 +1,35 @@
+.listar-trajetos-cursos-container {
+    margin: auto;
+    width: 64%;
+    border: 3px solid #3f51b5;
+    padding: 10px;
+    text-align: center;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+
+.select-listagem {
+    width: 100%;
+    display: block !important;
+}
+
+.cadastro-btn {
+    color: white !important;
+    background-color: green !important;
+    margin-top: 10px !important;
+    
+}
+.titulo-bv {
+    color: #3f51b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+
+/* .itemMenu {
+    display: flex !important ;
+} */
