@@ -1,8 +1,8 @@
 
 import api from '../../services/api';
 import { useState, useEffect } from 'react';
-import { Divider, Typography, Toolbar, Drawer, Grid, Card, CardContent, CardActions, Button, Box, Checkbox } from '@material-ui/core';
-import FourKIcon from '@material-ui/icons/FourK';
+import { Divider, Typography, Drawer, Grid, Card, CardContent, CardActions, Button } from '@material-ui/core';
+
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import DescriptionIcon from '@material-ui/icons/Description';
 import DnsIcon from '@material-ui/icons/Dns';
@@ -17,23 +17,15 @@ import { useNavigate } from "react-router-dom";
 export default function ListarCursosETrajetosAluno() {
     const [material, setMaterial] = useState([]);
     const [materialFinalizado, setMaterialFinalizado] = useState([]);
-    const [open, setOpen] = useState(false);
+    
     const navigate = useNavigate();
     const nome = localStorage.getItem('nome');
-    const email = localStorage.getItem('email');
+    const email = localStorage.getItem('easycode_email');
 
-
-    const [state, setState] = useState({
-        top: false,
-        left: false,
-        bottom: false,
-        right: false,
-    });
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [drawerOpenTrajeto, setDrawerOpenTrajeto] = useState(false);
     const [drawerInfo, setDrawerInfo] = useState({});
     async function toogleDrawerDraw(nome, descricao, topico_nome, dificuldade, titulo) {
-        //console.log(data);
         setDrawerInfo({
             nome,
             descricao,
@@ -42,13 +34,6 @@ export default function ListarCursosETrajetosAluno() {
             titulo
         })
         setDrawerOpen(true)
-    }
-
-
-
-    const toogleDrawerDrawTrajeto = () => {
-        console.log('oi');
-        setDrawerOpenTrajeto(true)
     }
 
     const handleCloseTrajeto = () => {

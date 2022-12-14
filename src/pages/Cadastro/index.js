@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './styles.css'
 
-import { Box, Container, CssBaseline, Checkbox, TextField, Grid, Typography, FormControlLabel, Button, Avatar, ListItemText, Link } from '@material-ui/core';
+import { Box, Container, TextField, Grid, Typography, Button, Avatar, Link } from '@material-ui/core';
 import api from '../../services/api';
-import axios from 'axios';
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -23,7 +23,7 @@ export default function Cadastro() {
             telefone,
         }
         try {
-            const response = await api.post('aluno', data);
+            await api.post('aluno', data);
             alert(`Aluno: ${nome} criado`)
             navigate('/login')
         } catch (e) {

@@ -1,11 +1,10 @@
 import './styles.css'
-import { Divider, Grid, Drawer, InputLabel, Select, MenuItem, Card, CardContent, Typography, CardActions, Button, Box, Checkbox } from '@material-ui/core';
+import { Divider, Grid, Drawer, InputLabel, Select, MenuItem, Card, CardContent, Typography, CardActions, Button, Checkbox } from '@material-ui/core';
 import { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Menu from '../../components/Menu';
 import DnsIcon from '@material-ui/icons/Dns';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import HelpIcon from '@material-ui/icons/Help';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -18,7 +17,7 @@ export default function ListarTrajetosECursos() {
     const [materialListado, setMaterialListado] = useState([]);
     const [materialASerExibido, setMaterialASerExibido] = useState([]);
     const [cursosETrajetosSelecionados, setCursosETrajetosSelecionados] = useState([]);
-    const email = localStorage.getItem('email');
+    const email = localStorage.getItem('easycode_email');
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [drawerInfo, setDrawerInfo] = useState({});
     async function toogleDrawerDraw(nome, descricao, topico_nome, dificuldade, titulo) {
@@ -140,7 +139,7 @@ export default function ListarTrajetosECursos() {
                 trajeto_ids.push(each.id);
             }
         });
-        const email = localStorage.getItem('email');
+        const email = localStorage.getItem('easycode_email');
         const data = {
             aluno_email: email,
             curso_ids,

@@ -32,7 +32,7 @@ export default function Login() {
             const response = await api.post('login', data);
             console.log(response);
             console.log(response.data);
-            localStorage.setItem('email', response.data.email);
+            localStorage.setItem('easycode_email', response.data.email);
             localStorage.setItem('nome', response.data.nome);
             navigate('/aluno/material');
         } catch (e) {

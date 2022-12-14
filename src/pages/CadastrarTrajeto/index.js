@@ -1,5 +1,5 @@
 import './styles.css'
-import { Grid, TextField, InputLabel, Select, MenuItem, Card, CardContent, Typography, CardActions, Button, Divider, Drawer, Checkbox, FormControl } from '@material-ui/core';
+import { Grid, TextField, InputLabel, Select, MenuItem, Card, CardContent, Typography, CardActions, Button, Divider, Drawer, Checkbox } from '@material-ui/core';
 import api from '../../services/api';
 import { useState } from 'react';
 import Menu from '../../components/Menu';
@@ -8,7 +8,6 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import { useNavigate } from "react-router-dom";
 import DnsIcon from '@material-ui/icons/Dns';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import HelpIcon from '@material-ui/icons/Help';
 
 

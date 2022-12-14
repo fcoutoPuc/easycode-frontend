@@ -1,17 +1,15 @@
 import { useParams } from 'react-router-dom';
-import { Grid, TextField, InputLabel, Select, MenuItem, Card, CardContent, Typography, CardActions, Button, Box, Checkbox } from '@material-ui/core';
+import { Grid, Card, CardContent, Typography} from '@material-ui/core';
 import './styles.css'
 import api from '../../services/api';
 import { useState, useEffect } from 'react';
 import Menu from '../../components/Menu';
-import { useNavigate } from "react-router-dom";
+
 
 export default function VerCursoPeloTrajeto() {
     const { cursoId } = useParams();
     const [linksCursos, setLinksCursos] = useState([]);
     const [cursoNome, setCursoNome] = useState('');
-    const navigate = useNavigate();
-
     useEffect(() => {
         const fetchData = async () => {
             const response = await api.get(`/curso/material/${cursoId}`);
@@ -23,20 +21,6 @@ export default function VerCursoPeloTrajeto() {
 
     }, [])
 
-    async function hanldeFinalizarCurso(e) {
-        const email = localStorage.getItem('email');
-        console.log(email);
-        console.log(cursoId);
-        try {
-            await api.post(`curso/finaliza/${email}/${cursoId}`);
-            alert(`Curso Finalizado`)
-            navigate('/aluno/material');
-        } catch (e) {
-            console.log(e);
-            alert(`${e}`);
-        }
-
-    }
     return (
         <>
             <Menu />

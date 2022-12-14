@@ -35,7 +35,7 @@ export default function FazerTrajeto() {
     }, [])
 
     async function handleFinalizarTrajeto(e) {
-        const email = localStorage.getItem('email');
+        const email = localStorage.getItem('easycode_email');
         console.log(email);
         console.log(trajetoId);
         try {

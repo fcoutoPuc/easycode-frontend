@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, TextareaAutosize, TextField, Grid, Typography, Button, IconButton, Toolbar, FormControlLabel, MenuItem, Checkbox, FormControl, InputLabel, Select, Paper } from '@material-ui/core';
+import { TextField, Grid, Button, MenuItem, InputLabel, Select } from '@material-ui/core';
 import './styles.css'
 import api from '../../services/api';
 import AddIcon from '@material-ui/icons/Add';
@@ -49,9 +49,9 @@ export default function CadastroCurso() {
 
         console.log(data)
         try {
-            await api.post('curso', data);
+            const response = await api.post('curso', data);
             alert(`Curso ${nome} Criado`);
-            navigate(`/trajeto/cursos`);
+            navigate(`/pergunta/curso/${response.data.id}`);
 
         } catch (e) {
             console.log(e);

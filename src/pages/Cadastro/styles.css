@@ -1,16 +1,16 @@
-.teste{
+.teste {
     margin-top: 50%;
     width: 100%;
     display: 'flex';
     
 }
 
-.btn-cadastro{
+.btn-cadastro {
     margin-top: 15px;
 }
 
 .link-para-login {
     margin-top: 10px;
     display: flex;
-    justify-content: end;
+    
 }

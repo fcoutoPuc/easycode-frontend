@@ -1,10 +1,11 @@
-import { AppBar, Typography, Toolbar, IconButton, Grid, Card, CardContent, CardActions, Button, Box, Checkbox } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Button, Box } from '@material-ui/core';
 import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import CreateNewFolderIcon from '@material-ui/icons/CreateNewFolder';
 import CodeIcon from '@material-ui/icons/Code';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import BatteryCharging60Icon from '@material-ui/icons/BatteryCharging60';
 import SearchIcon from '@material-ui/icons/Search';
+import HelpIcon from '@material-ui/icons/Help';
 import { useNavigate } from "react-router-dom";
 export default function Menu() {
     const navigate = useNavigate();
@@ -40,6 +41,12 @@ export default function Menu() {
                         }} color="inherit">
                             Explorar Material
                             <SearchIcon/>
+                        </Button>
+                        <Button onClick={() => {
+                            navigate(`/pergunta/new`);
+                        }} color="inherit">
+                            Criar Perguntas
+                            <HelpIcon />
                         </Button>
                         <Button onClick={() =>{
                             localStorage.clear();
