@@ -6,6 +6,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import BatteryCharging60Icon from '@material-ui/icons/BatteryCharging60';
 import SearchIcon from '@material-ui/icons/Search';
 import HelpIcon from '@material-ui/icons/Help';
+import AssessmentIcon from '@material-ui/icons/Assessment';
 import { useNavigate } from "react-router-dom";
 export default function Menu() {
     const navigate = useNavigate();
@@ -17,47 +18,52 @@ export default function Menu() {
                         EasyCode
                         </Typography>
                     <CodeIcon />
-                    <div class="items-menu">
+                <div class="items-menu">
                         <Button onClick={() => {
                             navigate(`/curso/new`);
                         }} color="inherit">
-                             Criar Curso
-                             <NoteAddIcon/>
+                            Criar Curso
+                             <NoteAddIcon />
                         </Button>
                         <Button onClick={() => {
                             navigate(`/trajeto/new`);
                         }} color="inherit">
                             Criar Trajeto
-                            <CreateNewFolderIcon/>
+                            <CreateNewFolderIcon />
                         </Button>
                         <Button onClick={() => {
                             navigate(`/aluno/material`);
                         }} color="inherit">
                             Em Andamento
-                            <BatteryCharging60Icon/>
+                            <BatteryCharging60Icon />
                         </Button>
                         <Button onClick={() => {
                             navigate(`/trajeto/cursos`);
                         }} color="inherit">
-                            Explorar Material
-                            <SearchIcon/>
+                            Explorar
+                            <SearchIcon />
                         </Button>
                         <Button onClick={() => {
                             navigate(`/pergunta/new`);
                         }} color="inherit">
-                            Criar Perguntas
+                            Criar Pergunta
                             <HelpIcon />
                         </Button>
-                        <Button onClick={() =>{
+                        <Button onClick={() => {
+                            navigate(`/indicadores`);
+                        }} color="inherit">
+                            
+                            <AssessmentIcon />
+                        </Button>
+
+                        <Button onClick={() => {
                             localStorage.clear();
                             navigate('/')
                         }} variant="contained" color="secondary" >
-                            Logout
                             <ExitToAppIcon />
 
                         </Button>
                     </div>
-
 
                 </Toolbar>
             </AppBar>
